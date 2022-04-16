@@ -43,8 +43,8 @@
 
 <body ondragstart="return false" oncontextmenu="self.event.returnValue=false">
     <div id="bar">
-        <span class="bar"><label id="count">made in </label>Gorkeki</span>
-        <span class="bar"><label id="time">高嘉麒牛逼</label></span>
+        <span class="bar"><label id="count">手机勿扰</label></span>
+        <span class="bar"><label id="time">右键插旗</label></span>
     </div>
     <table id="grid"></table>
 
@@ -53,6 +53,12 @@
         row = parseInt(row);
         var col = prompt("请输入列数", 10);
         col = parseInt(col);
+        if (col * row > 10000) {
+            alert("你牛逼");
+            col = 10;
+            row = 10;
+        }
+
         var maxCount = (row * col) / 10;
         var isFirstOpen = true;
         var grid = init_grid();
